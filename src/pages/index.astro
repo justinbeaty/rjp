@@ -1,15 +1,39 @@
 ---
+import { Image } from 'astro:assets';
+import '../css/index.css'
+
+const images = await Astro.glob('../images/*');
+
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <script src="../js/index.js"></script>
+
+        <title>Astro</title>
+    </head>
+    <body>
+        <main>
+            <h1>Robert J. Potter</h1>
+            <div>Nov 5 1953 - Sep 11 2023</div>
+            <a href="/rjp/RobertPotter-Images.zip" download>Download Images</a>
+
+            <div id="gallery">
+                {images.map(image => (
+
+                    <a href={image.default.src}
+                       data-pswp-width={image.default.width}
+                       data-pswp-height={image.default.height}
+                       target="_blank">
+                        <Image height="200" src={image.default} alt="" />
+                    </a>
+
+                ))}
+            </div>
+        </main>
+    </body>
 </html>
