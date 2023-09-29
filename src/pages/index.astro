@@ -9,20 +9,57 @@ const images = await Astro.glob('../images/*');
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <script src="../js/index.js"></script>
 
-        <title>Astro</title>
+        <title>Robert J. Potter</title>
     </head>
     <body>
         <main>
             <h1>Robert J. Potter</h1>
-            <div>Nov 5 1953 - Sep 11 2023</div>
-            <a href="/RobertPotter-Images.zip" download>Download Images</a>
+            <p>Nov 5th 1953 &ndash; Sep 11th 2023</p>
 
-            <div id="gallery">
+            <hr/>
+
+            <h2>Funeral Information:</h2>
+
+            <a href="/RJP-funeral-info-doc.pdf" download>Download PDF</a>
+
+            <p>Saturday, October 7, 2023</p>
+
+            <p>12:30 P.M.</p>
+
+            <p>
+                Forest Lawn Memorial Parks & Mortuary<br/>
+                4471 Lincoln Avenue<br/>
+                Cypress, CA 90630
+            </p>
+
+            <h3>Location & Service Details:</h3>
+
+            <p>Enter through the main entrance, turn right on first road, turn right again on first road. There will be steps on the left-hand side to the Garden of Protection by the Statue of David.</p>
+
+            <p>There will be a pastor-guided service with music and time for people to speak if they so desire. A tent with a limited number of preset chairs will be available. If you require seating we would appreciate you bringing your own so we can accommodate as many attendees as possible.</p>
+
+            <h3>Reception & Remembrances:</h3>
+
+            <p>Following the service there will be a table set up with baked goods and water so guests can pay their respects and share memories together. There will also be a guestbook and pamphlets available with pictures of Bob over the years.</p>
+
+
+            <hr/>
+
+            <h2>Pictures:</h2>
+
+            <p>As many of you may know, we had a fire in our home and lost many photos and documents. As we come across awards and other remembrances of Bob’s life and career we will add them to this living tribute of a life well lived. If you have any of your own pictures we will gladly add them to the website. You can send those items using the contact information below.</p>
+
+            <h3>Contact Information:</h3>
+            <p>Sandy Potter (wife): sandy.potter@att.net</p>
+
+            <p>Justin & Jennifer Beaty (daughter/son-in-law): justin.beaty@gmail.com</p>
+
+
+            <div style="margin-top: 30px" id="gallery">
                 {images.map(image => (
 
                     <a href={image.default.src}
