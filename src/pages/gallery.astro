@@ -1,0 +1,26 @@
+---
+import MainLayout from '@/layouts/Main.astro';
+
+import { Image } from 'astro:assets';
+
+const images = await Astro.glob('../images/*');
+
+---
+<MainLayout>
+    <h2>Pictures</h2>
+
+    <p>As many of you may know, we had a fire in our home and lost many photos and documents. As we come across awards and other remembrances of Bob’s life and career we will add them to this living tribute of a life well lived. If you have any of your own pictures please send them to sandy.potter@att.net or justin.beaty@gmail.com and we will gladly add them to the website.</p>
+
+    <div style="margin-top: 30px" id="gallery">
+        {images.map(image => (
+
+            <a href={image.default.src}
+               data-pswp-width={image.default.width}
+               data-pswp-height={image.default.height}
+               target="_blank">
+                <Image height="200" src={image.default} alt="" />
+            </a>
+
+        ))}
+    </div>
+</MainLayout>

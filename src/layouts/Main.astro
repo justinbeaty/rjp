@@ -4,6 +4,27 @@ import { Image } from 'astro:assets';
 import '../css/index.css'
 import BobProfile from '@/assets/bob-profile.jpg'
 
+import { Navigation } from 'astro-headless-ui';
+
+const links = {
+    active: { class: 'active' },
+    defaults: { class: 'link' },
+    links: [
+        {
+            text: 'About',
+            href: '/'
+        },
+        {
+            text: 'Gallery',
+            href: '/gallery.html'
+        },
+        {
+            text: 'Stories',
+            href: '/stories.html'
+        }
+    ]
+}
+
 ---
 
 <html lang="en">
@@ -20,6 +41,9 @@ import BobProfile from '@/assets/bob-profile.jpg'
             <h1>Robert J. Potter</h1>
             <h2>Nov 5th 1953 &ndash; Sep 11th 2023</h2>
         </header>
+        <nav>
+            <Navigation {...links}/>
+        </nav>
         <main class="prose lg:prose-xl prose-slate">
 
             <slot />

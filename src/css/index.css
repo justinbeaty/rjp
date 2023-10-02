@@ -4,14 +4,20 @@
 
 @layer base {
   body {
-    @apply text-stone-800;
+    @apply px-4 text-stone-800;
+
+    & > * {
+      @apply bg-stone-100 rounded-lg shadow-md my-4;
+    }
   }
+
+
 
   header {
 
-    @apply py-[10px] px-8 mx-auto;
+    @apply py-2.5 px-8 mx-auto;
 
-    @apply md:h-[240px] max-w-[1500px];
+    @apply md:h-[240px] max-w-screen-2xl;
     background: url('/banner.jpg') center center no-repeat;
     background-size: auto 100%;
 
@@ -33,22 +39,36 @@
     }
   }
 
+  nav {
+    @apply max-w-screen-2xl mx-auto py-2.5 px-8;
+
+    @apply flex gap-4;
+    a {
+      @apply px-2 py-1 rounded-md;
+      &.active {
+        @apply bg-stone-200;
+      }
+      &:hover {
+        @apply bg-stone-800 text-stone-100;
+      }
+    }
+  }
 
   main {
-    @apply max-w-[1500px] !important;
-    @apply mx-auto my-8 p-8;
-    @apply bg-stone-100;
-
+    @apply max-w-screen-2xl !important;
+    @apply mx-auto px-8 py-6;
   }
-#gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-}
-#gallery::after {
-  content: "";
-  flex: auto;
-}
+
+
+  #gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  #gallery::after {
+    content: "";
+    flex: auto;
+  }
 
 }
