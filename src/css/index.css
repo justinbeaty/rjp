@@ -8,41 +8,38 @@
   }
 
   header {
-    @apply flex flex-col-reverse md:flex-row;
 
     @apply py-[10px] px-8 mx-auto;
-    @apply text-stone-100;
 
-    @apply h-[240px] max-w-[1500px];
+    @apply md:h-[240px] max-w-[1500px];
     background: url('/banner.jpg') center center no-repeat;
     background-size: auto 100%;
 
-    div:first-child {
-      @apply flex-auto;
-      h1 {
-        @apply text-7xl;
-      }
-      h2 {
-        @apply text-xl;
-      }
+
+    @apply text-stone-100 text-center md:text-left;
+
+    h1 {
+      @apply text-4xl md:text-7xl md:mt-4 md:mb-8;
+      @apply drop-shadow-[5px_5px_5px_rgba(0,0,0,0.75)];
     }
-    div:last-child {
-      @apply flex-none;
-      img {
-        @apply w-auto h-[200px];
-      }
+    h2 {
+      @apply text-xl;
+      @apply drop-shadow-[2px_2px_2px_rgba(0,0,0,0.75)];
+    }
+    img {
+      @apply inline md:float-right;
+      @apply w-auto h-[200px] rounded-lg;
+      @apply drop-shadow-[5px_5px_5px_rgba(0,0,0,0.75)];
     }
   }
 
-
-  #main-content {
-    min-height: calc(100vh - 56px);
-  }
 
   main {
-    max-width: 1200px;
-    margin: 0 auto;
-}
+    @apply max-w-[1500px] !important;
+    @apply mx-auto my-8 p-8;
+    @apply bg-stone-100;
+
+  }
 #gallery {
   display: flex;
   flex-wrap: wrap;

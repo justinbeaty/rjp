@@ -761,6 +761,11 @@ array-iterate@^2.0.0:
   resolved "https://registry.yarnpkg.com/array-iterate/-/array-iterate-2.0.1.tgz#6efd43f8295b3fee06251d3d62ead4bd9805dd24"
   integrity sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==
 
+astro-headless-ui@^0.0.30:
+  version "0.0.30"
+  resolved "https://registry.yarnpkg.com/astro-headless-ui/-/astro-headless-ui-0.0.30.tgz#06e235334953bb3e3547d1a12489d21699c80cd5"
+  integrity sha512-Txj0uoZBa2kY+3Uqcc+fSGpCZpxZkHd2zGo24Nac3r2TDrbEYNAGQH3BiUcUhQzTSpeDvqAvr1S5vcM96sviLQ==
+
 astro-icon@^0.8.1:
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/astro-icon/-/astro-icon-0.8.1.tgz#2259640cea3818326957dfba66ae17aa43f1d3cb"
