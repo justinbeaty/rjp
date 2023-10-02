@@ -1,6 +1,47 @@
-main {
-  max-width: 1200px;
-  margin: 0 auto;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-stone-800;
+  }
+
+  header {
+    @apply flex flex-col-reverse md:flex-row;
+
+    @apply py-[10px] px-8 mx-auto;
+    @apply text-stone-100;
+
+    @apply h-[240px] max-w-[1500px];
+    background: url('/banner.jpg') center center no-repeat;
+    background-size: auto 100%;
+
+    div:first-child {
+      @apply flex-auto;
+      h1 {
+        @apply text-7xl;
+      }
+      h2 {
+        @apply text-xl;
+      }
+    }
+    div:last-child {
+      @apply flex-none;
+      img {
+        @apply w-auto h-[200px];
+      }
+    }
+  }
+
+
+  #main-content {
+    min-height: calc(100vh - 56px);
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 #gallery {
   display: flex;
@@ -11,4 +52,6 @@ main {
 #gallery::after {
   content: "";
   flex: auto;
+}
+
 }

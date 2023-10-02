@@ -1,5 +1,9 @@
 ---
+import { Image } from 'astro:assets';
+
 import '../css/index.css'
+import BobProfile from '@/assets/bob-profile.jpg'
+
 ---
 
 <html lang="en">
@@ -12,10 +16,15 @@ import '../css/index.css'
     </head>
     <body>
         <header>
-            <h1>Robert J. Potter</h1>
-            <p>Nov 5th 1953 &ndash; Sep 11th 2023</p>
+            <div>
+                <h1>Robert J. Potter</h1>
+                <h2>Nov 5th 1953 &ndash; Sep 11th 2023</h2>
+            </div>
+            <div>
+                <Image src={BobProfile} alt="Robert Potter" />
+            </div>
         </header>
-        <main>
+        <main class="prose lg:prose-xl prose-slate">
 
             <slot />
         </main>
