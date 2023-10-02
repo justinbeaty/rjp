@@ -1,0 +1,23 @@
+---
+import { Image } from 'astro:assets';
+
+const props = Astro.props;
+
+if (props.src && props.src instanceof Promise) {
+    props.src = (await props.src).default;
+}
+
+props.format = 'jpg'
+props.alt ??= "";
+props.loading ??= "eager";
+
+---
+
+<a
+    href={props.src.src}
+    data-pswp-width={props.width}
+    data-pswp-height={props.height}
+    target="_blank"
+>
+    <Image height="200" src={props.src} alt={props.alt} format={props.format} />
+</a>

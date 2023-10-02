@@ -5,10 +5,6 @@
 @layer base {
   body {
     @apply px-4 text-stone-800;
-
-    & > * {
-      @apply bg-stone-100 rounded-lg shadow-md my-4;
-    }
   }
 
 
@@ -16,6 +12,7 @@
   header {
 
     @apply py-2.5 px-8 mx-auto;
+    @apply bg-stone-100 rounded-lg shadow-md my-4;
 
     @apply md:h-[240px] max-w-screen-2xl;
     background: url('/banner.jpg') center center no-repeat;
@@ -41,6 +38,7 @@
 
   nav {
     @apply max-w-screen-2xl mx-auto py-2.5 px-8;
+    @apply bg-stone-100 rounded-lg shadow-md my-4;
 
     @apply flex gap-4;
     a {
@@ -57,6 +55,7 @@
   main {
     @apply max-w-screen-2xl !important;
     @apply mx-auto px-8 py-6;
+    @apply bg-stone-100 rounded-lg shadow-md my-4;
   }
 
 
