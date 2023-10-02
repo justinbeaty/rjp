@@ -1,27 +1,13 @@
 ---
+import MainLayout from '../layouts/Main.astro';
+
 import { Image } from 'astro:assets';
-import '../css/index.css'
+
 
 const images = await Astro.glob('../images/*');
 
 ---
-
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <script src="../js/index.js"></script>
-
-        <title>Robert J. Potter</title>
-    </head>
-    <body>
-        <main>
-            <h1>Robert J. Potter</h1>
-            <p>Nov 5th 1953 &ndash; Sep 11th 2023</p>
-
-            <hr/>
-
+<MainLayout>
             <h2>Funeral Information:</h2>
 
             <a href="/RJP-funeral-info-doc.pdf" download>Download PDF</a>
@@ -71,6 +57,4 @@ const images = await Astro.glob('../images/*');
 
                 ))}
             </div>
-        </main>
-    </body>
-</html>
+</MainLayout>
