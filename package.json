@@ -1,8 +1,7 @@
 {
-  "name": "@example/minimal",
+    "name": "rjp",
   "type": "module",
-  "version": "0.0.1",
-  "private": true,
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -11,7 +10,14 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/tailwind": "^5.0.0",
     "astro": "^3.1.4",
-    "photoswipe": "^5.4.1"
-  }
+    "photoswipe": "^5.4.1",
+    "tailwindcss": "^3.0.24"
+  },
+    "devDependencies": {
+        "prettier": "^2.8.8",
+        "prettier-plugin-astro": "^0.10.0",
+        "prettier-plugin-tailwindcss": "^0.3.0"
+    }
 }
