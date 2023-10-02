@@ -1,12 +1,21 @@
-import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import PhotoSwipe from 'photoswipe';
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import PhotoSwipeDynamicCaption from 'photoswipe-dynamic-caption-plugin';
+
 import 'photoswipe/style.css';
+import 'photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css'
 
 const lightbox = new PhotoSwipeLightbox({
     gallery: '#gallery',
     children: 'a',
     pswpModule: PhotoSwipe,
 });
+
+const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
+    // Plugins options, for example:
+    type: 'below',
+});
+
 lightbox.on('uiRegister', function() {
     lightbox.pswp.ui.registerElement({
         name: 'download-button',
@@ -33,7 +42,6 @@ lightbox.on('uiRegister', function() {
             el.setAttribute('rel', 'noopener');
 
             pswp.on('change', () => {
-                console.log('change');
                 el.href = pswp.currSlide.data.src;
             });
         }

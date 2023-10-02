@@ -20,4 +20,7 @@ props.loading ??= "eager";
     target="_blank"
 >
     <Image height="200" src={props.src} alt={props.alt} format={props.format} />
+    <span class="pswp-caption-content">
+        <slot />
+    </span>
 </a>
