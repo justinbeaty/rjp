@@ -11,6 +11,8 @@ props.format = 'jpg'
 props.alt ??= "";
 props.loading ??= "eager";
 
+const width = Math.round(200 * props.src.width / props.src.height) + 'px'
+
 ---
 
 <a
@@ -20,7 +22,7 @@ props.loading ??= "eager";
     target="_blank"
 >
     <Image height="200" src={props.src} alt={props.alt} format={props.format} />
-    <span class="pswp-caption-content">
+    <span style={{ width }} class="pswp-caption-content">
         <slot />
     </span>
 </a>

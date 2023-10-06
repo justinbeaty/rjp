@@ -64,6 +64,22 @@
     &:after {
       @apply flex-auto content-[''];
     }
+
+
+    a {
+      @apply text-sm no-underline;
+      img {
+        @apply mb-1;
+      }
+      .pswp-caption-content {
+        @apply block;
+        p {
+          @apply mt-1;
+        }
+      }
+    }
+
+
   }
 
 }
